@@ -98,6 +98,8 @@ paths:
       summary: Get Centers By Zip Code
       description: |-
         Returns a JSON list of centers in and near a certain zipcode
+        This only works for zipcodes in the U.S.A.
+        This is the BEST way to search for centers in the U.S.A by their location.
 
         "static-url" is for the chabad center's listing on chabad.org
       operationId: getCentersByZipCode
