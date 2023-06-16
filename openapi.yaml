@@ -115,6 +115,8 @@ paths:
     get:
       summary: Get Chabad Center Events
       description: Gets upcoming events at a certain Chabad center using its mosad id.
+
+        Please convert times from 24 hour format to 12 hour format.
       operationId: getChabadCenterEvents
       parameters:
         - name: mosad-id
