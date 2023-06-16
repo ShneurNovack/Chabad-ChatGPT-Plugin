@@ -1,4 +1,4 @@
-// worker.js
+// types.js
 export async function onRequest(context) {
     const api_url = 'https://www.chabad.org/api/v2/chabadorg/centers/types';
     const request = context.request;
