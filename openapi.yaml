@@ -36,7 +36,7 @@ paths:
     get:
       summary: Get Center Info
       description: |-
-        Gets full information on a certain Chabad center using its id.
+        Gets full information on a certain Chabad center using its mosad id.
 
         "static-url" is for the chabad center's listing on chabad.org
       operationId: getCenterInfo
@@ -108,6 +108,21 @@ paths:
             type: string
             example: 2-10001
           description: 2- followed by zipcode, ex. 2-32246
+      responses:
+        '200':
+          description: ''
+  /events:
+    get:
+      summary: Get Chabad Center Events
+      description: Gets upcoming events at a certain Chabad center using its mosad id.
+      operationId: getChabadCenterEvents
+      parameters:
+        - name: mosad-id
+          in: query
+          schema:
+            type: string
+            example: '118653'
+          description: the center's mosad id, it can be found using other api requests.
       responses:
         '200':
           description: ''
