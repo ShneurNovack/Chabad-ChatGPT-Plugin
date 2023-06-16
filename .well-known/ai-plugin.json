@@ -9,9 +9,9 @@
     },
     "api": {
       "type": "openapi",
-      "url": "https://shneurnovack.github.io/Chabad-ChatGPT-Plugin/openapi.yaml"
+      "url": "https://chabadplugin.reshapecreative.com/openapi.yaml"
     },
-    "logo_url": "https://shneurnovack.github.io/Chabad-ChatGPT-Plugin/logo.png",
+    "logo_url": "https://chabadplugin.reshapecreative.com/logo.png",
     "contact_email": "hello@reshapecreative.com",
     "legal_info_url": "https://www.chabad.org/library/article_cdo/aid/130435/jewish/Privacy-Policy-and-Terms-of-Service.htm"
   }
