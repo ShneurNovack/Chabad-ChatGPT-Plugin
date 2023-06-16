@@ -100,6 +100,7 @@ paths:
         Returns a JSON list of centers in and near a certain zipcode
         This only works for zipcodes in the U.S.A.
         This is the BEST way to search for centers in the U.S.A by their location.
+        Simply take the location in the U.S.A they are looking for, convert it into its zipcode(s), and use that.
 
         "static-url" is for the chabad center's listing on chabad.org
       operationId: getCentersByZipCode
