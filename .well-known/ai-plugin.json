@@ -2,8 +2,8 @@
     "schema_version": "v1",
     "name_for_human": "Chabad Centers",
     "name_for_model": "chabadCenters",
-    "description_for_human": "Find and get information about Chabad Centers worldwide",
-    "description_for_model": "For Finding and getting information about Chabad Centers worldwide",
+    "description_for_human": "Find information about Chabad Centers worldwide.",
+    "description_for_model": "This tool is used for finding and getting information about Chabad Centers worldwide.",
     "auth": {
       "type": "none"
     },
