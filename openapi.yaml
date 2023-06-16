@@ -7,9 +7,9 @@ info:
   version: 1.0.0
   contact: {}
 servers:
-  - url: https://www.chabad.org
+  - url: https://chabadplugin.reshapecreative.com
 paths:
-  /api/v2/chabadorg/centers/:
+  /centers:
     get:
       summary: List All Centers
       description: >-
@@ -19,7 +19,7 @@ paths:
       responses:
         '200':
           description: ''
-  /api/v2/chabadorg/centers/types:
+  /center-types:
     get:
       summary: List Center Types
       description: >-
@@ -29,28 +29,30 @@ paths:
       responses:
         '200':
           description: ''
-  /api/v2/chabadorg/centers/[mosed-id]:
+  /center:
     get:
       summary: Get Center Info
-      description: >-
-        Gets full information on a certain Chabad center using its id.
-
-
-        Replace \[mosed-id\] with the centers id, it can be found using other
-        api requests.
+      description: Gets full information on a certain Chabad center using its id.
       operationId: getCenterInfo
+      parameters:
+        - name: mosad-id
+          in: query
+          schema:
+            type: string
+            example: '334256'
+          description: the center's mosad id, it can be found using other api requests.
       responses:
         '200':
           description: ''
-  /api/v2/chabadorg/centers/search:
+  /search:
     get:
       summary: Search Centers
       description: >-
-        Use this to search for chabad centers, will return a JSON list od
-        centers and their basic info (including mosed-id) based on your queries
+        Use this to search for chabad centers, will return a JSON list of
+        centers and their basic info (including mosad-id) based on your queries
       operationId: searchCenters
       parameters:
-        - name: limit
+        - name: quantity
           in: query
           schema:
             type: string
@@ -62,7 +64,7 @@ paths:
           in: query
           schema:
             type: string
-            example: c
+            example: southside
           description: The query string you are searching by / for
         - name: type
           in: query
@@ -82,7 +84,7 @@ paths:
       responses:
         '200':
           description: ''
-  /api/v2/chabadorg/centers/locations:
+  /location:
     get:
       summary: Get Centers By Zip Code
       description: Returns a JSON list of centers in and near a certain zipcode
