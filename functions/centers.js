@@ -1,35 +1,24 @@
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
-
-/**
- * Respond to the request
- * @param {Request} request
- */
-async function handleRequest(request) {
-  let url = new URL(request.url)
-
+// pages/api/centers.js
+export default async (request, response) => {
   // Prepare the API URL
   let api_url = 'https://www.chabad.org/api/v2/chabadorg/centers/'
 
-  // Prepare the headers
-  let headers = new Headers(request.headers)
-
   // Check if the request method is GET
   if (request.method === 'GET') {
-    let response = await fetch(api_url, {
+    let apiResponse = await fetch(api_url, {
       method: request.method,
-      headers: headers
+      headers: request.headers
     })
 
     // Check if the API request is successful
-    if (response.ok) {
-      return response
+    if (apiResponse.ok) {
+      const data = await apiResponse.json();
+      response.status(200).json(data);
     } else {
-      return new Response('Error calling API', {status: response.status})
+      response.status(apiResponse.status).send('Error calling API');
     }
   } else {
-    // For non-GET requests, simply forward the request
-    return await fetch(request)
+    // For non-GET requests, simply respond with method not allowed
+    response.status(405).send('Method not allowed');
   }
 }
