@@ -3,7 +3,7 @@
     "name_for_human": "Chabad Centers",
     "name_for_model": "chabadCenters",
     "description_for_human": "Find and get information about Chabad Centers worldwide",
-    "description_for_model": "Plugin for Finding and getting information about Chabad Centers worldwide",
+    "description_for_model": "For Finding and getting information about Chabad Centers worldwide",
     "auth": {
       "type": "none"
     },
