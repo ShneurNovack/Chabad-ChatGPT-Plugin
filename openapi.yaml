@@ -89,7 +89,8 @@ paths:
           schema:
             type: string
             example: novack
-          description: search by shliach's first or last name but not both
+          description: search by shliach's first or last name but not both,
+            For example if you want to search for someone "Shmuli Novack", Search for "Novack" or "shmuli", a last name will usually work better.
       responses:
         '200':
           description: ''
